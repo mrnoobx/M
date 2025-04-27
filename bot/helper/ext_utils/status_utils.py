@@ -264,7 +264,7 @@ async def get_readable_message(
         #     )
 
         msg += (
-            f"\n<pre>#Jet{index + start_position} ❤🚀...(Processing)</pre>\n"
+            f"\n<pre>#ησσв{index + start_position} ❤🚀...(Processing)</pre>\n"
             f"Filename: {escape(f"{task.name()}")}\n"
         )
         if tstatus not in [
