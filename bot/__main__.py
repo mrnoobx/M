@@ -72,7 +72,7 @@ import asyncio
 
 @new_task
 async def restart(_, message):
-    sticker_message = await message.reply_sticker("CAACAgUAAxkBAAEXrSRlbwYlArKGw0lVGUGHquKMqbu3fQACLggAAmCIwVXm28BgWp1jmzME")
+    sticker_message = await message.reply_sticker("CAACAgQAAxkBAAKr72gONGhJmnvSIToTwIcEeJACNGnmAAMUAAKW3WFQeY9Y07tJ39g2BA")
     await asyncio.sleep(2)
     await sticker_message.delete()
     intervals["stopAll"] = True
