@@ -551,7 +551,7 @@ async def send_bot_limits(_, query):
     UMT = "Unlimited" if config_dict["USER_MAX_TASKS"] == "" else config_dict["USER_MAX_TASKS"]
     BMT = "Unlimited" if config_dict["QUEUE_ALL"] == "" else config_dict["QUEUE_ALL"]
 
-    bot_limit = f"<b><i><u>🚀Jet Bot Limitations</u></i></b>\n" \
+    bot_limit = f"<b><i><u>🚀ησσв вσт ℓιмιтαтισηѕ</u></i></b>\n" \
                 f"<code>Torrent   : {TOR}</code> <b>GB</b>\n" \
                 f"<code>G-Drive   : {GDL}</code> <b>GB</b>\n" \
                 f"<code>Yt-Dlp    : {YTD}</code> <b>GB</b>\n" \
