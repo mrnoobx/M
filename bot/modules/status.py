@@ -258,7 +258,7 @@ def bot_sys_stats():
     swap = swap_memory().percent
     disk = disk_usage(config_dict["DOWNLOAD_DIR"]).percent
     traf = get_readable_file_size(net_io_counters().bytes_sent + net_io_counters().bytes_recv)
-    bmsg = f'______🚀Jet Bot Info______\n\n'
+    bmsg = f'______🚀ησσв вσт ιηƒσ______\n\n'
     bmsg += f"C: {cpup}% | "
     bmsg += f"R: {ramp}% | "
     bmsg += f"S: {swap}% | "
@@ -301,7 +301,7 @@ async def stats(_, message, edit_mode=False):
     mem_p = memory.percent
     swap = swap_memory()
 
-    bot_stats = f"<b><i><u>🚀Jet Bot Statistics</u></i></b>\n\n"\
+    bot_stats = f"<b><i><u>🚀ησσв вσт ѕтαтιѕтι¢ѕ</u></i></b>\n\n"\
                 f"<code>CPU  : </code>{get_progress_bar_string(cpuUsage)} {cpuUsage}%\n" \
                 f"<code>RAM  : </code>{get_progress_bar_string(mem_p)} {mem_p}%\n" \
                 f"<code>SWAP : </code>{get_progress_bar_string(swap.percent)} {swap.percent}%\n" \
@@ -311,9 +311,9 @@ async def stats(_, message, edit_mode=False):
                 f"<code>Uploaded        : </code> {sent}\n" \
                 f"<code>Downloaded      : </code> {recv}\n" \
                 f"<code>Total Bandwidth : </code> {tb}" \
-                f'\n\n<a href="https://t.me/JetMirror">𝑩𝒐𝒕 𝒃𝒚 🚀 𝑱𝒆𝒕-𝑴𝒊𝒓𝒓𝒐𝒓</a>'
+                f'\n\n<a href="https://t.me/noob_project">𝑩𝒐𝒕 𝒃𝒚 🚀 Noob-𝑴𝒊𝒓𝒓𝒐𝒓</a>'
 
-    sys_stats = f"<b><i><u>🚀Jet System Statistics</u></i></b>\n\n"\
+    sys_stats = f"<b><i><u>🚀ησσв ѕуѕтєм ѕтαтιѕтι¢ѕ</u></i></b>\n\n"\
                 f"<b>System Uptime:</b> <code>{sysTime}</code>\n" \
                 f"<b>CPU:</b> {get_progress_bar_string(cpuUsage)}<code> {cpuUsage}%</code>\n" \
                 f"<b>CPU Total Core(s):</b> <code>{cpu_count(logical=True)}</code>\n" \
@@ -328,7 +328,7 @@ async def stats(_, message, edit_mode=False):
                 f"<b>Free:</b> <code>{get_readable_file_size(swap.free)}</code>\n\n" \
                 f"<b>DISK:</b> {get_progress_bar_string(disk)}<code> {disk}%</code>\n" \
                 f"<b>Total:</b> <code>{total}</code> | <b>Free:</b> <code>{free}</code>" \
-                f'\n\n<a href="https://t.me/JetMirror">𝑩𝒐𝒕 𝒃𝒚 🚀 𝑱𝒆𝒕-𝑴𝒊𝒓𝒓𝒐𝒓</a>'
+                f'\n\n<a href="https://t.me/noob_project">𝑩𝒐𝒕 𝒃𝒚 🚀 Noob-𝑴𝒊𝒓𝒓𝒐𝒓</a>'
 
     buttons.data_button(
         "ꜱʏꜱᴛᴇᴍ\nꜱᴛᴀᴛꜱ",
@@ -510,7 +510,7 @@ async def send_repo_stats(_, query):
                  f"<code>- Version   : </code> {version}    \n"   \
                  f"<code>- Changelog : </code> {change_log} \n\n" \
                  f"<b>{update_info}</b>" \
-                f'\n\n<a href="https://t.me/JetMirror">𝑩𝒐𝒕 𝒃𝒚 🚀 𝑱𝒆𝒕-𝑴𝒊𝒓𝒓𝒐𝒓</a>'
+                f'\n\n<a href="https://t.me/noob_project">𝑩𝒐𝒕 𝒃𝒚 🚀 Noob-𝑴𝒊𝒓𝒓𝒐𝒓</a>'
 
     buttons.data_button(
         "ʙᴏᴛ\nꜱᴛᴀᴛꜱ", 
@@ -563,7 +563,7 @@ async def send_bot_limits(_, query):
                 f"<code>MEGA      : {MGA}</code> <b>GB</b>\n\n" \
                 f"<code>User Tasks: {UMT}</code>\n" \
                 f"<code>Bot Tasks : {BMT}</code>" \
-                f'\n\n<a href="https://t.me/JetMirror">𝑩𝒐𝒕 𝒃𝒚 🚀 𝑱𝒆𝒕-𝑴𝒊𝒓𝒓𝒐𝒓</a>'
+                f'\n\n<a href="https://t.me/noob_project">𝑩𝒐𝒕 𝒃𝒚 🚀 Noob-𝑴𝒊𝒓𝒓𝒐𝒓</a>'
 
     buttons.data_button(
         "ʙᴏᴛ\nꜱᴛᴀᴛꜱ",
