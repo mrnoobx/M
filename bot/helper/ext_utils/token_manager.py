@@ -18,7 +18,7 @@ from ..telegram_helper.message_utils import (
     send_message,
     send_log_message
 )
-
+import asyncio
 from nekozee.filters import command
 from nekozee.handlers import MessageHandler
 
@@ -65,7 +65,7 @@ async def checking_access(user_id, button=None):
             button = ButtonMaker()
         button.url_button(
             "ɢᴇɴᴇʀᴀᴛᴇ\nɴᴇᴡ ᴛᴏᴋᴇɴ",
-            short_url(f"https://redirect.z-mirror.eu.org/{bot_name}/{token}")
+            short_url(f"https://redirect.jet-mirror.in/{bot_name}/{token}")
         )
         tmsg = (
             "You need to generate a new <b>Token</b>."
@@ -83,6 +83,9 @@ async def checking_access(user_id, button=None):
 
 @new_task
 async def start(client, message):
+    sticker_message = await message.reply_sticker("CAACAgIAAxkBAAEarGtmq8a_Hy6_Pk8IzUHRO8i1dvwDyAACFh4AAuzxOUkNYHq7o3u0ODUE")
+    await asyncio.sleep(2)
+    await sticker_message.delete()
     tag = message.from_user.mention
     if (
         len(message.command) > 1
@@ -200,9 +203,10 @@ async def start(client, message):
         config_dict["DM_MODE"]
         and message.chat.type != message.chat.type.SUPERGROUP
     ):
-        start_string = "Bot Started.\n" \
-                       "Now I will send all of your stuffs here.\n" \
-                       "Use me at: @Z_Mirror"
+        start_string = 'Bot Started.\n' \
+                       'Now I will send all of your stuffs here.\n' \
+                       'Use me at: @noob_project \n' \
+                       'Repo: @noob_project'
     elif (
         not config_dict["DM_MODE"]
         and message.chat.type != message.chat.type.SUPERGROUP
@@ -225,9 +229,16 @@ async def start(client, message):
     else:
         start_string = "Start me in DM, not in the group.\n" \
                        f"cc: {tag}"
-    await send_message(
-        message,
-        start_string
+    buttons = ButtonMaker()
+    buttons.url_button("Join Channel 🚀", "https://t.me/noob_project", position="header")
+    buttons.url_button("Owner ☀️", "https://t.me/l_abani", position="header")
+    buttons.url_button("Repo 🌐", "https://t.me/l_abani", position="footer")
+    reply_markup = buttons.build_menu(3)
+    await client.send_photo(
+        chat_id=message.chat.id,
+        photo="/usr/src/app/noob.jpg",
+        caption=start_string,
+        reply_markup=reply_markup
     )
 
 
