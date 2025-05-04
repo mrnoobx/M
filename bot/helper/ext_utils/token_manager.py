@@ -205,8 +205,8 @@ async def start(client, message):
     ):
         start_string = 'Bot Started.\n' \
                        'Now I will send all of your stuffs here.\n' \
-                       'Use me at: @noob_project \n' \
-                       'Repo: @noob_project'
+                       'Use me at: t.me/+TQtbRiTi9t5jOGQ1 \n' \
+                       'Dm For Repo: @l_abani'
     elif (
         not config_dict["DM_MODE"]
         and message.chat.type != message.chat.type.SUPERGROUP
@@ -232,7 +232,7 @@ async def start(client, message):
     buttons = ButtonMaker()
     buttons.url_button("Join Channel 🚀", "https://t.me/noob_project", position="header")
     buttons.url_button("Owner ☀️", "https://t.me/l_abani", position="header")
-    buttons.url_button("Repo 🌐", "https://t.me/l_abani", position="footer")
+    buttons.url_button("Repo 🌐", "https://github.com/mrnoobx/M", position="footer")
     reply_markup = buttons.build_menu(3)
     await client.send_photo(
         chat_id=message.chat.id,
